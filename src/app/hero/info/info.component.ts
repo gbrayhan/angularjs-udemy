@@ -1,16 +1,16 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 import {NgIf} from "@angular/common";
 
 @Component({
-  selector: 'app-heroes-hero',
+  selector: 'app-hero-info',
   standalone: true,
   imports: [
     NgIf
   ],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.css'
+  templateUrl: './info.component.html',
+  styleUrl: './info.component.css'
 })
-export class HeroComponent {
+export class InfoComponent {
   public name: string = 'Ironman'
   public age: number = 45
 

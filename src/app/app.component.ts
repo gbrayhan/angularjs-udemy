@@ -1,14 +1,13 @@
 import {Component, signal} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import {CounterComponent} from "./counter/counter.component";
-import {HeroComponent} from "./heroes/hero/hero.component";
-import {ListComponent} from "./heroes/list/list.component";
+import {CountModule} from "./count/count.module";
+import {HeroModule} from "./hero/hero.module";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, CounterComponent, HeroComponent, ListComponent],
+  imports: [CommonModule, RouterOutlet, CountModule, HeroModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

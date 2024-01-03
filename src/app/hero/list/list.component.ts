@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {NgForOf, NgIf} from "@angular/common";
 
 @Component({
-  selector: 'app-heroes-list',
+  selector: 'app-hero-list',
   standalone: true,
   imports: [
     NgForOf,
