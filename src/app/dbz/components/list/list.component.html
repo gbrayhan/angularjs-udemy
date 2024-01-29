@@ -9,20 +9,10 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <td>Goku</td>
-      <td>Saiyan</td>
-      <td>Over 9000</td>
-    </tr>
-    <tr>
-      <td>Vegeta</td>
-      <td>Saiyan</td>
-      <td>8500</td>
-    </tr>
-    <tr>
-      <td>Frieza</td>
-      <td>Unknown</td>
-      <td>120,000 (Final Form)</td>
+    <tr *ngFor="let character of charactersListFromParent">
+      <td>{{ character.name }}</td>
+      <td>{{ character.race }}</td>
+      <td>{{ character.power}}</td>
     </tr>
     </tbody>
   </table>
