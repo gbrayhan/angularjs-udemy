@@ -18,5 +18,13 @@ export class MainPageComponent {
 
   public onNewCharacter(character: Character): void {
     console.log("main component: ", character);
+
+    this.characters.push(character);
+  }
+
+
+  public onDeleteCharacter(name: string): void {
+    console.log("main component: ", name);
+    this.characters = this.characters.filter(c => c.name !== name);
   }
 }
