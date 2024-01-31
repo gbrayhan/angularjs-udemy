@@ -10,6 +10,8 @@ import {Character} from "../../interfaces/character.interface";
 export class MainPageComponent {
   characters: Character[] = [
     {name: 'Goku', power: 15000, race: 'Saiyan'},
-    {name: 'Vegeta', power: 8500, race: 'Saiyan'}
+    {name: 'Vegeta', power: 8500, race: 'Saiyan'},
+    {name: 'Freezer', power: 2000, race: 'Alien'},
+    {name: 'Pikoro', power: 1600, race: 'Namekusei'},
   ];
 }

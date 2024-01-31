@@ -3,20 +3,38 @@
   <form>
     <div class="mb-3">
       <label for="characterName" class="form-label">Nombre del Personaje</label>
-      <input type="text" class="form-control" id="characterName" placeholder="Nombre del Personaje">
+      <input
+        type="text"
+        name="name"
+        [(ngModel)]="newCharacter.name"
+        class="form-control" id="characterName"
+        placeholder="Nombre del Personaje">
     </div>
 
     <div class="mb-3">
       <label for="characterRace" class="form-label">Raza</label>
-      <input type="text" class="form-control" id="characterRace" placeholder="Raza">
+      <input
+        type="text"
+        [(ngModel)]="newCharacter.race"
+        name="race"
+        class="form-control"
+        id="characterRace"
+        placeholder="Raza">
     </div>
 
     <div class="mb-3">
       <label for="powerLevel" class="form-label">Nivel de Poder</label>
-      <input type="text" class="form-control" id="powerLevel" placeholder="Nivel de Poder">
+      <input
+        type="text"
+        [(ngModel)]="newCharacter.power"
+        name="power"
+        class="form-control"
+        id="powerLevel"
+        placeholder="Nivel de Poder">
     </div>
 
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    <button type="submit" class="btn btn-primary" (click)="saveCharacter()">Enviar</button>
   </form>
+  <pre>{{ newCharacter | json }}</pre>
 </div>
 

@@ -9,10 +9,11 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let character of charactersListFromParent">
-      <td>{{ character.name }}</td>
-      <td>{{ character.race }}</td>
-      <td>{{ character.power}}</td>
+    <tr  *ngFor="let character of charactersListFromParent;
+        let idOdd= odd; let isEven = even;">
+      <td [ngClass]="{'red-color-row ': idOdd, 'blue-color-row': isEven}">{{ character.name }}</td>
+      <td [ngClass]="{'red-color-row ': idOdd, 'blue-color-row': isEven}">{{ character.race }}</td>
+      <td [ngClass]="{'red-color-row ': idOdd, 'blue-color-row': isEven}">{{ character.power}}</td>
     </tr>
     </tbody>
   </table>
