@@ -1,6 +1,6 @@
 <div class="container mt-4">
   <h2>Ingrese Datos del Personaje de Dragon Ball Z</h2>
-  <form>
+  <form (ngSubmit)="saveCharacter()">
     <div class="mb-3">
       <label for="characterName" class="form-label">Nombre del Personaje</label>
       <input
@@ -33,7 +33,7 @@
         placeholder="Nivel de Poder">
     </div>
 
-    <button type="submit" class="btn btn-primary" (click)="saveCharacter()">Enviar</button>
+    <button type="submit" class="btn btn-primary">Enviar</button>
   </form>
   <pre>{{ newCharacter | json }}</pre>
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {Character} from "../../interfaces/character.interface";
 import {FormsModule} from "@angular/forms";
 import {JsonPipe} from "@angular/common";
@@ -15,11 +15,15 @@ import {JsonPipe} from "@angular/common";
 })
 export class CreateComponent {
 
+
   public newCharacter: Character = {
     name: '',
     race: '',
     power: 0
   }
+  @Output()
+  public onNewCharacter: EventEmitter<Character> = new EventEmitter<Character>();
+
 
   // setter newCharacter to initial value
   initializeNewCharacter() {
@@ -32,7 +36,18 @@ export class CreateComponent {
 
   }
   public saveCharacter() {
+    // validate properties
+    if (this.newCharacter.name.trim().length === 0
+      || this.newCharacter.race.trim().length === 0
+      || this.newCharacter.power <= 0
+    ) {
+      return;
+    }
     console.log("save: ", this.newCharacter);
+
+    // emit event
+    this.onNewCharacter.emit({...this.newCharacter});
+
 
     this.initializeNewCharacter();
   }

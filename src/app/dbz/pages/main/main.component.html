@@ -1,5 +1,7 @@
 
 <dbz-components-list [charactersListFromParent]="characters"/>
 
-<dbz-components-create/>
+<dbz-components-create (onNewCharacter)="onNewCharacter($event)"/>
+
+
 
