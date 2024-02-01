@@ -1,7 +1,7 @@
 
-<dbz-components-list [charactersListFromParent]="characters" (onDeleteCharacter)="onDeleteCharacter($event)"/>
+<dbz-components-list [charactersListFromParent]="dbzService.characters" (onDeleteCharacter)="dbzService.onDeleteCharacter($event)"/>
 
-<dbz-components-create (onNewCharacter)="onNewCharacter($event)" />
+<dbz-components-create (onNewCharacter)="dbzService.onNewCharacter($event)" />
 
 
 
