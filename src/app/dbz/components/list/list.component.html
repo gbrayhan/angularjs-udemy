@@ -14,7 +14,7 @@
       <td [ngClass]="{'red-color-row ': idOdd, 'blue-color-row': isEven}">{{ character.name }}</td>
       <td [ngClass]="{'red-color-row ': idOdd, 'blue-color-row': isEven}">{{ character.race }}</td>
       <td [ngClass]="{'red-color-row ': idOdd, 'blue-color-row': isEven}">{{ character.power}}</td>
-      <td  [ngClass]="{'red-color-row ': idOdd, 'blue-color-row': isEven}" > <button class="btn btn-danger" (click)="deletedCharacter(character.name)" >Delete</button> </td>
+      <td  [ngClass]="{'red-color-row ': idOdd, 'blue-color-row': isEven}" > <button class="btn btn-danger" (click)="deletedCharacter(character.id)" >Delete</button> </td>
     </tr>
     </tbody>
   </table>

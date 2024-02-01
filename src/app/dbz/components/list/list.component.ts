@@ -12,18 +12,12 @@ export class ListComponent {
   public onDeleteCharacter: EventEmitter<string> = new EventEmitter<string>();
 
 
-
-  public charactersList: Character[] = [
-    {name: 'Trunks', power: 15000, race: 'Saiyan'},
-    {name: 'Yamkcha', power: 8500, race: 'Human'}
-  ];
-
   @Input()
   public charactersListFromParent: Character[] = [];
 
-  public deletedCharacter(name: string):void {
-    console.log("deleted: ", name);
-    this.onDeleteCharacter.emit(name);
+  public deletedCharacter(id: string):void {
+    console.log("deleted: ", id);
+    this.onDeleteCharacter.emit(id);
   }
 
 }

@@ -3,6 +3,7 @@ import {Character} from "../../interfaces/character.interface";
 import {FormsModule} from "@angular/forms";
 import {JsonPipe} from "@angular/common";
 
+import { v4 as uuid } from 'uuid';
 @Component({
   selector: 'dbz-components-create',
   standalone: true,
@@ -17,6 +18,7 @@ export class CreateComponent {
 
 
   public newCharacter: Character = {
+    id: uuid(),
     name: '',
     race: '',
     power: 0
@@ -28,6 +30,7 @@ export class CreateComponent {
   // setter newCharacter to initial value
   initializeNewCharacter() {
     this.newCharacter = {
+      id: uuid(),
       name: '',
       race: '',
       power: 0
@@ -47,7 +50,6 @@ export class CreateComponent {
 
     // emit event
     this.onNewCharacter.emit({...this.newCharacter});
-
 
     this.initializeNewCharacter();
   }
